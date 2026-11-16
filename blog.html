@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Escrita, biografias e publicação de livros | BUKU Autores</title>
+  <meta name="description" content="Artigos sobre biografias, escrita de livros, publicação, conhecimento profissional e histórias institucionais. Aprenda a transformar a sua experiência num livro.">
+  <link rel="canonical" href="https://buku.co.mz/blog.html">
+  <meta property="og:title" content="Blog BUKU Autores">
+  <meta property="og:image" content="https://buku.co.mz/assets/img/leitura-pb.jpg">
+  <meta name="theme-color" content="#C62127">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="blog">
+<header id="site-header"></header>
+<main>
+  <section class="wrap page-head page-head--split">
+    <div>
+      <span class="eyebrow reveal">Blog</span>
+      <h1 class="reveal reveal-d1">Ideias para quem tem uma história para contar.</h1>
+    </div>
+    <p class="lead reveal reveal-d2">Guias práticos sobre escrita, biografias, publicação e organização do conhecimento.</p>
+  </section>
+  <section class="section" style="padding-top:56px">
+    <div class="wrap">
+      <div class="filters" id="blog-filters" role="toolbar" aria-label="Filtrar artigos por categoria"></div>
+      <div class="posts" id="blog-grid" aria-live="polite"></div>
+    </div>
+  </section>
+  <section class="section section--tight section--dark">
+    <div class="wrap magnet">
+      <div data-book='{"style":"red","title":"Da ideia ao livro","author":"Guia gratuito"}'></div>
+      <div>
+        <span class="eyebrow">Conteúdo gratuito</span>
+        <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem)">Receba o guia “Da ideia ao livro”</h2>
+        <p class="muted">E novos artigos no seu email. Sem spam.</p>
+        <form class="form" data-buku-form="guia" name="guia" method="POST" data-netlify="true" netlify-honeypot="empresa_site" novalidate>
+          <input type="hidden" name="form-name" value="guia">
+          <input class="hp" name="empresa_site" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field"><label for="g-nome">Nome</label><input id="g-nome" name="nome" required autocomplete="name"><span class="field__err">Indique o seu nome.</span></div>
+          <div class="field"><label for="g-email">Email</label><input id="g-email" name="email" type="email" required autocomplete="email"><span class="field__err">Email inválido.</span></div>
+          <button class="btn btn--primary" type="submit">Receber o guia</button>
+          <div class="form__status" role="status" style="color:var(--ink)"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer id="site-footer"></footer>
+<script src="assets/js/content-data.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

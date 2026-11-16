@@ -1,0 +1,29 @@
+{
+  "obras": [
+    {
+      "id": "modelo-ficha-de-obra",
+      "demo": true,
+      "publicado": true,
+      "titulo": "Título da obra (modelo)",
+      "subtitulo": "Ficha de demonstração — substituir pelos materiais reais",
+      "autor": "Nome do autor, quando autorizado",
+      "autor_autorizado": true,
+      "categoria": "biografias",
+      "ano": "2026",
+      "capa": "",
+      "capa_estilo": "red",
+      "resumo": "Esta é uma ficha-modelo que mostra como cada obra aparece no portfólio. Só é visível com ?modelo=1 no endereço e deve ser substituída por uma obra real no painel administrativo.",
+      "servicos": ["Entrevistas orientadas", "Redacção", "Revisão", "Design de capa", "Paginação"],
+      "paginas": "",
+      "formato": "",
+      "fotografias": ["assets/img/livro-maos.jpg", "assets/img/livros-pilha.jpg", "assets/img/leitura.jpg"],
+      "paginas_interiores": [],
+      "video": "",
+      "caso_problema": "Que necessidade tinha o autor? (ex.: experiência acumulada sem tempo para escrever)",
+      "caso_processo": "Como a BUKU trabalhou (n.º de entrevistas, estrutura, rondas de revisão).",
+      "caso_resultado": "O que foi entregue e o impacto para o autor.",
+      "testemunho": "",
+      "testemunho_autorizado": false
+    }
+  ]
+}

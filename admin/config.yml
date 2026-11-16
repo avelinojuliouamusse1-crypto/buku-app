@@ -1,0 +1,108 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: pt
+media_folder: "assets/img/uploads"
+public_folder: "assets/img/uploads"
+
+collections:
+  - name: "conteudos"
+    label: "Conteúdos do site"
+    files:
+      - name: "obras"
+        label: "Portfólio — Obras"
+        file: "content/obras.json"
+        fields:
+          - label: "Obras"
+            name: "obras"
+            widget: "list"
+            summary: "{{fields.titulo}} ({{fields.categoria}})"
+            fields:
+              - { label: "ID (endereço, sem espaços)", name: "id", widget: "string", hint: "ex.: memorias-de-um-medico" }
+              - { label: "Publicado", name: "publicado", widget: "boolean", default: true }
+              - { label: "Ficha-modelo (só visível com ?modelo=1)", name: "demo", widget: "boolean", default: false }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Subtítulo", name: "subtitulo", widget: "string", required: false }
+              - { label: "Autor", name: "autor", widget: "string", required: false }
+              - { label: "Autor autorizou a divulgação do nome?", name: "autor_autorizado", widget: "boolean", default: false }
+              - label: "Categoria"
+                name: "categoria"
+                widget: "select"
+                options:
+                  - { label: "Biografias", value: "biografias" }
+                  - { label: "Autobiografias", value: "autobiografias" }
+                  - { label: "Livros científicos", value: "cientificos" }
+                  - { label: "Livros educativos", value: "educativos" }
+                  - { label: "Livros religiosos", value: "religiosos" }
+                  - { label: "Projectos institucionais", value: "institucionais" }
+              - { label: "Ano", name: "ano", widget: "string", required: false }
+              - { label: "Mockup da capa", name: "capa", widget: "image", required: false, hint: "Se vazio, é gerado um mockup com o título." }
+              - { label: "Cor do mockup automático", name: "capa_estilo", widget: "select", options: ["red", "white", "black"], default: "red" }
+              - { label: "Descrição resumida", name: "resumo", widget: "text" }
+              - { label: "Serviços executados", name: "servicos", widget: "list", required: false }
+              - { label: "N.º de páginas", name: "paginas", widget: "string", required: false }
+              - { label: "Formato", name: "formato", widget: "string", required: false }
+              - { label: "Fotografias do livro", name: "fotografias", widget: "list", field: { label: "Imagem", name: "imagem", widget: "image" }, required: false }
+              - { label: "Páginas interiores", name: "paginas_interiores", widget: "list", field: { label: "Imagem", name: "imagem", widget: "image" }, required: false }
+              - { label: "Vídeo (link YouTube)", name: "video", widget: "string", required: false }
+              - { label: "Estudo de caso — desafio", name: "caso_problema", widget: "text", required: false }
+              - { label: "Estudo de caso — processo", name: "caso_processo", widget: "text", required: false }
+              - { label: "Estudo de caso — resultado", name: "caso_resultado", widget: "text", required: false }
+              - { label: "Testemunho", name: "testemunho", widget: "text", required: false }
+              - { label: "Testemunho autorizado?", name: "testemunho_autorizado", widget: "boolean", default: false }
+
+      - name: "testemunhos"
+        label: "Testemunhos"
+        file: "content/testemunhos.json"
+        fields:
+          - label: "Testemunhos"
+            name: "testemunhos"
+            widget: "list"
+            summary: "{{fields.nome}}"
+            fields:
+              - { label: "Nome", name: "nome", widget: "string" }
+              - { label: "Função / profissão", name: "funcao", widget: "string", required: false }
+              - { label: "Obra", name: "obra", widget: "string", required: false }
+              - { label: "Texto", name: "texto", widget: "text" }
+              - { label: "Nota de transparência", name: "nota", widget: "string", required: false, hint: "ex.: Obra produzida sem custo no programa Autores Fundadores." }
+              - { label: "Autorização escrita recebida", name: "autorizado", widget: "boolean", default: false }
+              - { label: "Publicado", name: "publicado", widget: "boolean", default: true }
+
+      - name: "artigos"
+        label: "Blog — Artigos"
+        file: "content/artigos.json"
+        fields:
+          - label: "Artigos"
+            name: "artigos"
+            widget: "list"
+            summary: "{{fields.data}} — {{fields.titulo}}"
+            fields:
+              - { label: "ID (endereço, sem espaços)", name: "id", widget: "string" }
+              - { label: "Publicado", name: "publicado", widget: "boolean", default: true }
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Resumo (SEO)", name: "resumo", widget: "text" }
+              - { label: "Categoria", name: "categoria", widget: "select", options: ["Biografias", "Escrita de livros", "Publicação", "Conhecimento profissional", "Histórias institucionais"] }
+              - { label: "Data", name: "data", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+              - { label: "Imagem", name: "imagem", widget: "image" }
+              - { label: "Tempo de leitura", name: "leitura", widget: "string", required: false }
+              - { label: "Texto", name: "corpo", widget: "markdown" }
+
+      - name: "definicoes"
+        label: "Definições (contactos, redes, analytics)"
+        file: "content/definicoes.json"
+        fields:
+          - { label: "WhatsApp (só números, com 258)", name: "whatsapp", widget: "string" }
+          - { label: "Mensagem padrão do WhatsApp", name: "whatsapp_mensagem", widget: "string" }
+          - { label: "Telefone", name: "telefone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Morada", name: "morada", widget: "string" }
+          - { label: "Horário", name: "horario", widget: "string" }
+          - { label: "Instagram (URL)", name: "instagram", widget: "string", required: false }
+          - { label: "Facebook (URL)", name: "facebook", widget: "string", required: false }
+          - { label: "TikTok (URL)", name: "tiktok", widget: "string", required: false }
+          - { label: "LinkedIn (URL)", name: "linkedin", widget: "string", required: false }
+          - { label: "Publicações do Instagram a mostrar (URLs)", name: "instagram_posts", widget: "list", required: false }
+          - { label: "Vídeo de apresentação (YouTube)", name: "video_apresentacao", widget: "string", required: false }
+          - { label: "Google Analytics 4 — ID (G-XXXX)", name: "ga4_id", widget: "string", required: false }
+          - { label: "Meta Pixel — ID", name: "meta_pixel_id", widget: "string", required: false }

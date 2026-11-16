@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contactos — Peça uma proposta para o seu livro | BUKU Autores</title>
+  <meta name="description" content="Fale com a BUKU. Peça uma proposta para a sua biografia, livro profissional, educativo ou religioso. Respondemos em até 2 dias úteis.">
+  <link rel="canonical" href="https://buku.co.mz/contactos.html">
+  <meta property="og:title" content="Fale com a BUKU Autores">
+  <meta property="og:image" content="https://buku.co.mz/assets/img/autor-buku.jpg">
+  <meta name="theme-color" content="#C62127">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="contactos">
+<header id="site-header"></header>
+
+<main>
+  <section class="wrap page-head page-head--split">
+    <div>
+      <span class="eyebrow reveal">Contactos</span>
+      <h1 class="reveal reveal-d1">Vamos falar sobre o seu livro.</h1>
+    </div>
+    <p class="lead reveal reveal-d2">Conte-nos a sua ideia. Respondemos em até 2 dias úteis com os próximos passos e uma proposta adequada.</p>
+  </section>
+
+  <section class="section" style="padding-top:64px">
+    <div class="wrap contact">
+      <aside class="contact__info reveal">
+        <div class="wa-card">
+          <h3 style="margin:0;color:#fff;font-size:1.2rem;letter-spacing:-.01em;text-transform:none">Prefere conversar já?</h3>
+          <p>Fale directamente com a nossa equipa pelo WhatsApp.</p>
+          <a class="btn btn--primary" href="#" data-wa style="justify-self:start">Abrir WhatsApp</a>
+        </div>
+        <div><h3>Telefone</h3><a href="#" data-cfg="telefone"></a></div>
+        <div><h3>Email</h3><a href="#" data-cfg="email"></a></div>
+        <div><h3>Localização</h3><p data-cfg="morada"></p></div>
+        <div><h3>Horário</h3><p data-cfg="horario"></p></div>
+        <div><h3>Redes sociais</h3><div data-social></div></div>
+      </aside>
+
+      <div class="reveal reveal-d1">
+        <form class="form" id="proposta" data-buku-form="proposta" name="proposta" method="POST" data-netlify="true" netlify-honeypot="empresa_site" novalidate>
+          <input type="hidden" name="form-name" value="proposta">
+          <input class="hp" name="empresa_site" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="field"><label for="f-nome">Nome completo</label><input id="f-nome" name="nome" required autocomplete="name"><span class="field__err">Indique o seu nome.</span></div>
+          <div class="field"><label for="f-tel">Telefone / WhatsApp</label><input id="f-tel" name="telefone" type="tel" required autocomplete="tel" placeholder="+258 ..."><span class="field__err">Indique um número válido.</span></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"><span class="field__err">Indique um email válido.</span></div>
+          <div class="field"><label for="f-profissao">Profissão</label><input id="f-profissao" name="profissao" required placeholder="Ex.: médico, professora, pastor"><span class="field__err">Indique a sua profissão.</span></div>
+          <div class="field"><label for="f-tipo">Tipo de projecto</label>
+            <select id="f-tipo" name="tipo_projecto" required>
+              <option value="">Seleccione…</option>
+              <option value="biografias">Biografia ou autobiografia</option>
+              <option value="profissionais">Livro científico ou profissional</option>
+              <option value="educativos">Livro educativo ou religioso</option>
+              <option value="manuscritos">Edição de manuscrito</option>
+              <option value="institucional">Documentação institucional / empresarial</option>
+              <option value="outro">Outro / ainda não sei</option>
+            </select><span class="field__err">Escolha uma opção.</span></div>
+          <div class="field"><label for="f-prazo">Prazo pretendido</label>
+            <select id="f-prazo" name="prazo">
+              <option value="">Sem prazo definido</option>
+              <option>Até 3 meses</option>
+              <option>3 a 6 meses</option>
+              <option>6 a 12 meses</option>
+              <option>Mais de 12 meses</option>
+            </select></div>
+          <div class="field field--full"><label for="f-ideia">Descreva a sua ideia</label><textarea id="f-ideia" name="ideia" required placeholder="Sobre o que é o livro? Para quem? Já tem algum texto escrito?"></textarea><span class="field__err">Conte-nos um pouco sobre a sua ideia.</span></div>
+          <div class="field field--full"><label for="f-como">Como nos conheceu? <span class="opt">(opcional)</span></label>
+            <select id="f-como" name="como_conheceu"><option value="">—</option><option>Instagram</option><option>Facebook</option><option>TikTok</option><option>WhatsApp</option><option>Google</option><option>Recomendação</option><option>Evento</option><option>Outro</option></select></div>
+          <div class="form__foot">
+            <small>Os seus dados são usados apenas para responder ao seu pedido. Ver <a href="privacidade.html">política de privacidade</a>.</small>
+            <button class="btn btn--primary" type="submit">Enviar pedido de proposta</button>
+          </div>
+          <div class="form__status" role="status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+<script src="assets/js/content-data.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
